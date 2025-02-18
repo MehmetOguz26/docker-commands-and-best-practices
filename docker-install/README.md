@@ -19,28 +19,40 @@ Before running the installation scripts, make sure your system meets the followi
 
 ### 1. For Ubuntu-based systems (e.g., Ubuntu, Debian):
 
-Run the following commands to install Docker on Ubuntu:
+Follow these steps to install Docker on an Ubuntu-based system:
 
 ```bash
-# Download the script
-wget https://github.com/MehmetOguz26/docker-commands-and-best-practices/docker-install/ubuntu-docker-install.sh
+# Download the Ubuntu installation script
+wget https://path/to/your/repository/docker-install/install-ubuntu.sh
 
 # Make the script executable
-chmod +x ubuntu-docker-install.sh
+chmod +x install-ubuntu.sh
 
 # Run the installation script
-./ubuntu-docker-install.sh
+./install-ubuntu.sh
+This script will:
+### Update your system package lists.
+Install Docker dependencies.
+Add Docker’s official repository and GPG key.
+Install Docker.
+Start and enable the Docker service.
 
-### 2. For RHEL-based systems (e.g., Ubuntu, Debian):
-
-Run the following commands to install Docker on Ubuntu:
+### 2. For CentOS/Red Hat-based systems (e.g., CentOS, RHEL):
+Follow these steps to install Docker on CentOS or Red Hat-based systems:
 
 ```bash
-# Download the script
-wget https://github.com/MehmetOguz26/docker-commands-and-best-practices/docker-install/centos-docker-install.sh
+# Download the CentOS/RedHat installation script
+wget https://path/to/your/repository/docker-install/install-centos-redhat.sh
 
 # Make the script executable
-chmod +x centos-docker-install.sh
+chmod +x install-centos-redhat.sh
 
 # Run the installation script
-./centos-docker-install.sh
+./install-centos-redhat.sh
+This script will:
+
+### Update your system.
+Install required dependencies.
+Add Docker’s official repository.
+Install Docker.
+Start and enable the Docker service.
