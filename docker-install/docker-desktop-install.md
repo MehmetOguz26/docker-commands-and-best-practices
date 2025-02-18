@@ -1,7 +1,5 @@
----
-title: Install Docker Desktop 
-description: Install Docker Desktop 
----
+
+#  Install Docker Desktop 
 
 ## Step-01: Introduction
 1. Install Docker Desktop
@@ -12,7 +10,7 @@ description: Install Docker Desktop
 - [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ## Step-03: Install Docker Desktop 
-
+```
 ### Step-03-01: MACOS: Install Docker Desktop 
 
 # Install Docker Desktop
@@ -23,7 +21,7 @@ https://hub.docker.com
 
 # Signin Docker Desktop 
 Open Docker Desktop and SignIn to Docker Hub
-
+```
 ### Step-03-02: WINDOWS: Install Docker Desktop 
 
 # Download Docker Desktop
