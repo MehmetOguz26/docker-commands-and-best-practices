@@ -1,0 +1,12 @@
+WORKDIR /opt/
+WORKDIR apps
+WORKDIR myapp1
+RUN pwd
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt 
+
+COPY app.py .
+
+COPY templates/ ./templates/
