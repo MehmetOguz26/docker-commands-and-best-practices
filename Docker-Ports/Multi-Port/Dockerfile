@@ -19,11 +19,11 @@ LABEL nginx_port2=${NGINX_PORT2}
 RUN apk --no-cache add curl
 
 # Create two directories for serving content
-RUN mkdir -p /usr/share/nginx/html/app1 /usr/share/nginx/html/app2
+RUN mkdir -p /usr/share/nginx/html/app01 /usr/share/nginx/html/app02
 
 # Copy content to the respective directories
-COPY app1/index.html /usr/share/nginx/html/app1
-COPY app2/index.html /usr/share/nginx/html/app2
+COPY app1/index.html /usr/share/nginx/html/app01
+COPY app2/index.html /usr/share/nginx/html/app02
 COPY index.html /usr/share/nginx/html
 
 # Copy custom NGINX configuration file to default.conf
