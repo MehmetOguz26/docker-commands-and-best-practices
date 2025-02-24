@@ -32,7 +32,7 @@ mysqldb-named-volume/
 ## Step-04: Services
 
 1. **MySQL Service**:
-   - Uses the official `mysql:8.0` image from Docker Hub.
+   - Uses the official `mysql` image from Docker Hub.
    - Configures database credentials and schema via environment variables.
    - The MySQL container is exposed on port `3306` of the host machine.
    - Data is persisted in a named Docker volume (`mysqldb`), ensuring the database remains intact even after the container is stopped or removed.
@@ -127,7 +127,7 @@ Connect to the MySQL container and interact with the database:
 
 ```bash
 # Connect to MySQL container
-docker exec -it mysql mysql -u root -pdbpassword11
+docker exec -it mysql mysql -u root -p dbpassword11
 ```
 
 - Once inside the MySQL shell, you can execute SQL queries to interact with the `webappdb` database.
