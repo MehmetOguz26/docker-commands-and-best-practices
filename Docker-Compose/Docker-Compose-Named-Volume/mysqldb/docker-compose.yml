@@ -1,0 +1,22 @@
+name: mysql-stack
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dbpassword11
+      MYSQL_DATABASE: webappdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldb:/var/lib/mysql
+
+volumes:
+  mysqldb:
+    name: mysql-data-v1
+    driver: local  
+    labels:
+      project: "mysql-stack"           
+      component: "mysql-database"    
+      purpose: "persistent-storage"  
