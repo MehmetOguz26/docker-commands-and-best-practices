@@ -1,0 +1,28 @@
+name: mysql-stack
+services:
+  mysqlapp:
+    container_name: mysql-app
+    image: ghcr.io/mehmetoguz26/usermgmt-webapp-v6:latest
+    ports:
+      - "8080:8080"        
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOSTNAME=mysql
+      - DB_PORT=3306
+      - DB_NAME=webappdb
+      - DB_USERNAME=root
+      - DB_PASSWORD=dbpassword11
+  mysql:
+    container_name: mysql
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dbpassword11
+      MYSQL_DATABASE: webappdb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldb:/var/lib/mysql
+volumes:
+  mysqldb:
